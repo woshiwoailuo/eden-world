@@ -1,0 +1,27 @@
+:root { --bg:#0a0c10; --panel:#111827; --ink:#f8fafc; --muted:#94a3b8; --amber:#d97706; --line:#1f2937; }
+* { box-sizing: border-box; }
+html, body { margin:0; background:var(--bg); color:var(--ink); font-family:"Songti SC","Noto Serif SC",serif; }
+.top { display:flex; justify-content:space-between; align-items:flex-end; padding:16px 22px 10px; border-bottom:1px solid var(--line); }
+.title { font-size:22px; letter-spacing:.12em; }
+.sub { color:var(--muted); font-size:13px; margin-top:4px; }
+.live { color:#86efac; font-size:13px; }
+.dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#22c55e; margin-right:6px; }
+.layout { display:grid; grid-template-columns:1fr 300px; gap:16px; padding:16px 22px; }
+.map-wrap { background:#07080b; border:1px solid var(--line); padding:8px; }
+canvas { width:100%; height:auto; image-rendering:pixelated; background:#0b1220; cursor:pointer; }
+.side { display:flex; flex-direction:column; gap:12px; }
+.card { background:var(--panel); border:1px solid var(--line); padding:14px; }
+.card h2 { margin:0 0 8px; font-size:14px; letter-spacing:.16em; color:var(--amber); }
+.muted { color:var(--muted); font-size:13px; line-height:1.55; }
+form { display:flex; flex-direction:column; gap:8px; }
+input, select, button { font:inherit; padding:8px 10px; border-radius:4px; border:1px solid #334155; background:#0b1220; color:var(--ink); }
+button { background:#d97706; color:#111; border:0; cursor:pointer; }
+.bottom { display:grid; grid-template-columns:1.2fr 1fr .9fr; gap:16px; padding:0 22px 28px; }
+.feed { max-height:240px; overflow:auto; font-size:13px; line-height:1.6; }
+.feed div { border-bottom:1px solid #1e293b; padding:6px 0; }
+.who { color:var(--amber); }
+.tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.tags span { font-size:12px; border:1px solid #334155; color:#cbd5e1; padding:2px 8px; }
+.bar { height:6px; background:#1e293b; margin:6px 0 10px; }
+.bar > i { display:block; height:100%; background:#d97706; }
+@media (max-width:900px) { .layout, .bottom { grid-template-columns:1fr; } }

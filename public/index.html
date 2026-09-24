@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>伊甸边缘 · 实时世界</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <div class="title" id="worldName">伊甸边缘</div>
+      <div class="sub" id="meta">连接中…</div>
+    </div>
+    <div class="live"><span class="dot"></span>全站同一世界 · 实时同步</div>
+  </header>
+  <main class="layout">
+    <section class="map-wrap">
+      <canvas id="map" width="960" height="640"></canvas>
+    </section>
+    <aside class="side">
+      <div class="card" id="focusCard">
+        <h2>选中之人</h2>
+        <p class="muted">点击地图上的人。</p>
+      </div>
+      <div class="card">
+        <h2>天降一人</h2>
+        <form id="offer">
+          <input name="name" placeholder="名字" maxlength="12" required />
+          <select name="gender"><option value="m">男</option><option value="f">女</option></select>
+          <input name="baseUrl" placeholder="API 根地址（可选）" />
+          <input name="model" placeholder="模型名（可选）" />
+          <input name="apiKey" type="password" placeholder="API Key（可选）" />
+          <button type="submit">投入世界</button>
+        </form>
+        <p id="offerMsg" class="muted"></p>
+      </div>
+    </aside>
+  </main>
+  <section class="bottom">
+    <div class="card"><h2>镇民思想</h2><div id="thoughts" class="feed"></div></div>
+    <div class="card"><h2>编年</h2><div id="chronicle" class="feed"></div></div>
+    <div class="card"><h2>规矙与文明</h2><ul id="laws"></ul><div id="civ" class="tags"></div></div>
+  </section>
+  <script src="/app.js"></script>
+</body>
+</html>
