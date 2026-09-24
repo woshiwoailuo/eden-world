@@ -1,0 +1,8 @@
+{
+  "name": "eden-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "伊甸边缘实时文明模拟",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" }
+}
